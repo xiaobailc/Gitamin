@@ -13,6 +13,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "~5.1.26",
+        "phecho/uploader": "^0.1",
         "klaussilveira/gitter": "0.3.*",
         "zizaco/entrust": "dev-laravel-5",
         "alt-three/emoji": "^2.1",
@@ -20,7 +21,6 @@
         "barryvdh/laravel-cors": "^0.7",
         "doctrine/dbal": "^2.5",
         "fideloper/proxy": "^3.0",
-        "graham-campbell/binput": "^3.3",
         "graham-campbell/core": "^4.2",
         "graham-campbell/markdown": "^5.3",
         "graham-campbell/throttle": "^5.1",

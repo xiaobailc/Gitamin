@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0a769c4496a84e265fc7d444437ae550",
-    "content-hash": "f4192dd0a200704a352658ff41df74a2",
+    "hash": "7dd6e71016d8ebe5f207c8e76c3fdf7e",
+    "content-hash": "78d30216d84a81f44516831e9e049244",
     "packages": [
         {
             "name": "alt-three/emoji",
@@ -943,69 +943,6 @@
             "time": "2015-06-29 05:42:04"
         },
         {
-            "name": "graham-campbell/binput",
-            "version": "v3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamCampbell/Laravel-Binput.git",
-                "reference": "a2610fb332a9e2440262b6df5056a518fe0a57f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Binput/zipball/a2610fb332a9e2440262b6df5056a518fe0a57f3",
-                "reference": "a2610fb332a9e2440262b6df5056a518fe0a57f3",
-                "shasum": ""
-            },
-            "require": {
-                "graham-campbell/security": "^3.5",
-                "illuminate/contracts": "5.1.*|5.2.*",
-                "illuminate/http": "5.1.*|5.2.*",
-                "illuminate/support": "5.1.*|5.2.*",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "^3.1",
-                "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.8|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\Binput\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                }
-            ],
-            "description": "Binput Is An Input Protector For Laravel 5",
-            "keywords": [
-                "Binput",
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel Binput",
-                "Laravel-Binput",
-                "better",
-                "better input",
-                "framework",
-                "input",
-                "laravel",
-                "security"
-            ],
-            "time": "2015-11-14 11:49:49"
-        },
-        {
             "name": "graham-campbell/core",
             "version": "v4.2.0",
             "source": {
@@ -1191,63 +1128,6 @@
                 "markdown"
             ],
             "time": "2015-11-14 11:57:14"
-        },
-        {
-            "name": "graham-campbell/security",
-            "version": "v3.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamCampbell/Laravel-Security.git",
-                "reference": "bb4e8ec9cfc27403232df7fc2714217f976d875f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Security/zipball/bb4e8ec9cfc27403232df7fc2714217f976d875f",
-                "reference": "bb4e8ec9cfc27403232df7fc2714217f976d875f",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "5.1.*|5.2.*",
-                "illuminate/support": "5.1.*|5.2.*",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "^3.1",
-                "phpunit/phpunit": "^4.8|^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\Security\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                }
-            ],
-            "description": "Security Is A Port Of The Security Class From Codeigniter 3 For Laravel 5",
-            "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel Security",
-                "Laravel-Security",
-                "codeigniter",
-                "framework",
-                "laravel",
-                "security"
-            ],
-            "time": "2015-11-14 11:44:07"
         },
         {
             "name": "graham-campbell/throttle",
@@ -1480,6 +1360,68 @@
                 "uri"
             ],
             "time": "2015-11-03 01:34:55"
+        },
+        {
+            "name": "intervention/image",
+            "version": "2.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "a67ee32df0c6820cc6e861ad4144ee0ef9c74aa3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://packagist.phpcomposer.com/files/Intervention/image/a67ee32df0c6820cc6e861ad4144ee0ef9c74aa3.zip",
+                "reference": "a67ee32df0c6820cc6e861ad4144ee0ef9c74aa3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "guzzlehttp/psr7": "~1.1",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "phpunit/phpunit": "3.*"
+            },
+            "suggest": {
+                "ext-gd": "to use GD library based image processing.",
+                "ext-imagick": "to use Imagick based image processing.",
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Image\\": "src/Intervention/Image"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@olivervogel.net",
+                    "homepage": "http://olivervogel.net/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel integration",
+            "homepage": "http://image.intervention.io/",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2015-11-30 17:03:21"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2339,6 +2281,57 @@
                 "random"
             ],
             "time": "2015-12-10 14:48:13"
+        },
+        {
+            "name": "phecho/uploader",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phecho/Uploader.git",
+                "reference": "7e779a0f83489fe37cbdbc04f3d984fb876d3d15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "http://packagist.phpcomposer.com/files/phecho/Uploader/7e779a0f83489fe37cbdbc04f3d984fb876d3d15.zip",
+                "reference": "7e779a0f83489fe37cbdbc04f3d984fb876d3d15",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.1.*|5.2.*",
+                "intervention/image": "~2.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Phecho\\Uploader\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The Gitamin Team",
+                    "email": "support@gitamin.com"
+                }
+            ],
+            "description": "Uploader for Laravel",
+            "keywords": [
+                "ajax",
+                "file",
+                "gitamin",
+                "image",
+                "laravel",
+                "upload"
+            ],
+            "time": "2015-12-15 14:22:28"
         },
         {
             "name": "psr/http-message",
