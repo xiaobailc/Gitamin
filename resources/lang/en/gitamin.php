@@ -37,9 +37,9 @@ return [
             'failure' => 'The Project could not be deleted. Please try again.',
         ],
         'status' => [
-            1 => 'Public',
-            2 => 'Internal',
-            3 => 'Private',
+            0 => 'Public',
+            1 => 'Internal',
+            2 => 'Private',
         ],
     ],
 
@@ -157,6 +157,7 @@ return [
     'signin' => [
         'signin' => 'Existing user? Sign in',
         'title' => 'Sign in',
+        'login' => 'Username or Email',
         'email' => 'Email',
         'password' => 'Password',
         '2fauth' => 'Authentication Code',
