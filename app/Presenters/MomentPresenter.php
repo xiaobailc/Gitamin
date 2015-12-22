@@ -11,14 +11,13 @@
 
 namespace Gitamin\Presenters;
 
-use Gitamin\Facades\Setting;
 use Gitamin\Models\Comment;
 use Gitamin\Models\Issue;
 use Gitamin\Models\Moment;
+use Gitamin\Models\Owner;
 use Gitamin\Models\Project;
-use Gitamin\Presenters\Traits\TimestampsTrait;
+use Gitamin\Traits\TimestampsTrait;
 use GrahamCampbell\Markdown\Facades\Markdown;
-use Jenssegers\Date\Date;
 
 class MomentPresenter extends AbstractPresenter
 {
@@ -68,25 +67,22 @@ class MomentPresenter extends AbstractPresenter
 
     public function icon()
     {
-        if ($this->wrappedObject->target instanceof Project) {
+        if ($this->wrappedObject->momentable instanceof Project) {
             return 'fa fa-cubes';
-        } elseif ($this->wrappedObject->target instanceof Comment) {
+        } elseif ($this->wrappedObject->momentable instanceof Comment) {
             return 'fa fa-comments-o';
-        } elseif ($this->wrappedObject->target instanceof Issue) {
+        } elseif ($this->wrappedObject->momentable instanceof Issue) {
             return 'fa fa-exclamation-circle';
+        } elseif ($this->wrappedObject->momentable instanceof Owner) {
+            return 'fa fa-user';
         } else {
             return 'fa fa-code-fork';
         }
     }
 
-    /**
-     * Present formatted date time.
-     *
-     * @return string
-     */
-    public function created_at_iso()
+    public function momentableName()
     {
-        return $this->wrappedObject->created_at->setTimezone($this->setting->get('app_timezone'))->toISO8601String();
+        return str_replace('Gitamin\\Models\\', '', get_class($this->wrappedObject->momentable));
     }
 
     /**

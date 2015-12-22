@@ -9,14 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace Gitamin\Presenters\Traits;
+namespace Gitamin\Exceptions;
 
-use Gitamin\Scopes\VisibilityScope;
+use Exception;
 
-trait HasVisibilities
+/**
+ * This is the user already been taken exception class.
+ */
+class UserAlreadyTakenException extends Exception implements ExceptionInterface
 {
-    public static function bootHasVisibilities()
-    {
-        static::addGlobalScope(new VisibilityScope);
-    }
+    //
 }

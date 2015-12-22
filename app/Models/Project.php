@@ -45,7 +45,7 @@ namespace Gitamin\Models;
 
 use AltThree\Validator\ValidatingTrait;
 use Gitamin\Presenters\ProjectPresenter;
-use Gitamin\Presenters\Traits\HasVisibilities;
+use Gitamin\Traits\VisibilityTrait;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -53,7 +53,7 @@ use McCool\LaravelAutoPresenter\HasPresenter;
 
 class Project extends Model implements HasPresenter
 {
-    use SoftDeletes, ValidatingTrait, HasVisibilities;
+    use SoftDeletes, ValidatingTrait, VisibilityTrait;
 
     /**
      * List of attributes that have default values.
@@ -116,7 +116,7 @@ class Project extends Model implements HasPresenter
      */
     public function owner()
     {
-        return $this->belongsTo(Group::class, 'owner_id', 'id');
+        return $this->belongsTo(Owner::class, 'owner_id', 'id');
     }
 
     /**

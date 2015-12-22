@@ -14,7 +14,6 @@ namespace Gitamin\Http\Controllers;
 use Exception;
 use Gitamin\Facades\Setting;
 use Gitamin\Models\Issue;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use Jenssegers\Date\Date;
@@ -96,18 +95,10 @@ class ExploreController extends Controller
         }
         $dateTimeZone = Setting::get('app_timezone');
 
-        $issueVisiblity = Auth::check() ? 0 : 1;
-
         $allIssues = Issue::whereBetween('created_at', [
             $startDate->copy()->subDays($daysToShow)->format('Y-m-d').' 00:00:00',
             $startDate->format('Y-m-d').' 23:59:59',
         ])->orderBy('created_at', 'desc')->get()->groupBy(function (Issue $issue) use ($dateTimeZone) {
-            // If it's scheduled, get the scheduled at date.
-            if ($issue->is_scheduled) {
-                return (new Date($issue->scheduled_at))
-                    ->setTimezone($dateTimeZone)->toDateString();
-            }
-
             return (new Date($issue->created_at))
                 ->setTimezone($dateTimeZone)->toDateString();
         });

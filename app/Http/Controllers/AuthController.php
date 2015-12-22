@@ -25,7 +25,7 @@ class AuthController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function showLogin()
+    public function loginAction()
     {
         return View::make('auth.login')
             ->withPageTitle(trans('dashboard.login.login'));
@@ -36,12 +36,12 @@ class AuthController extends Controller
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function postLogin()
+    public function loginPost()
     {
         $loginData = Request::only(['login', 'password']);
 
+        // Login with username or email.
         $loginKey = Str::contains($loginData['login'], '@') ? 'email' : 'username';
-
         $loginData[$loginKey] = array_pull($loginData, 'login');
 
         // Validate login credentials.
